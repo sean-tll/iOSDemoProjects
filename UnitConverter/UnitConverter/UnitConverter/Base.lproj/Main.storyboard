@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nfw-cg-2nb">
+                                <rect key="frame" x="79" y="171" width="187" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="in mile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7e-Lu-WaK">
+                                <rect key="frame" x="274" y="176" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6vP-B7-VsI">
+                                <rect key="frame" x="125" y="223" width="125" height="29"/>
+                                <segments>
+                                    <segment title="km"/>
+                                    <segment title="inch"/>
+                                    <segment title="yard"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Update for the answer " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZG-X8-3I2">
+                                <rect key="frame" x="79.5" y="323" width="216.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6K9-ao-JZi">
+                                <rect key="frame" x="162" y="269" width="51" height="49"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZbV-eJ-4Ul"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6vP-B7-VsI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ace-Oy-wPu"/>
+                            <constraint firstItem="tZG-X8-3I2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L3s-Oa-gOT"/>
+                            <constraint firstItem="6K9-ao-JZi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="YwV-ad-g8r"/>
+                            <constraint firstItem="tZG-X8-3I2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ctb-5c-bMD"/>
+                            <constraint firstItem="tZG-X8-3I2" firstAttribute="firstBaseline" secondItem="6K9-ao-JZi" secondAttribute="baseline" constant="24.5" symbolType="layoutAnchor" id="gQf-mh-995"/>
+                            <constraint firstItem="6K9-ao-JZi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qdZ-zN-MX7"/>
+                            <constraint firstItem="6K9-ao-JZi" firstAttribute="top" secondItem="6vP-B7-VsI" secondAttribute="bottom" constant="18" id="uK9-9n-gh1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputField" destination="Nfw-cg-2nb" id="tqR-zs-3YO"/>
+                        <outlet property="outputField" destination="tZG-X8-3I2" id="873-1R-1lj"/>
+                        <outlet property="segmentController" destination="6vP-B7-VsI" id="9cC-7h-MKB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
