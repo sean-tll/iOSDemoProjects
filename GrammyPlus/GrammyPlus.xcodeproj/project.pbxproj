@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DEDF42E103F76BD449E39692 /* Pods_GrammyPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2FD558928F0539B56FE392 /* Pods_GrammyPlus.framework */; };
 		E03D2E0C1FE89AB9007E4DE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D2E0B1FE89AB9007E4DE0 /* AppDelegate.m */; };
 		E03D2E0F1FE89AB9007E4DE0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D2E0E1FE89AB9007E4DE0 /* ViewController.m */; };
 		E03D2E121FE89AB9007E4DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E03D2E101FE89AB9007E4DE0 /* Main.storyboard */; };
 		E03D2E141FE89AB9007E4DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E03D2E131FE89AB9007E4DE0 /* Assets.xcassets */; };
 		E03D2E171FE89AB9007E4DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E03D2E151FE89AB9007E4DE0 /* LaunchScreen.storyboard */; };
 		E03D2E1A1FE89AB9007E4DE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D2E191FE89AB9007E4DE0 /* main.m */; };
-		E3C1D3CB8BA4416F96212DF9 /* libPods-GrammyPlus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73963BF2A233FE615DEBEF69 /* libPods-GrammyPlus.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		73963BF2A233FE615DEBEF69 /* libPods-GrammyPlus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GrammyPlus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94D60912D4ABFE6E61911EE /* Pods-GrammyPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammyPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrammyPlus/Pods-GrammyPlus.release.xcconfig"; sourceTree = "<group>"; };
+		CB2FD558928F0539B56FE392 /* Pods_GrammyPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrammyPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF21074D114A7A5B787E435 /* Pods-GrammyPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammyPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrammyPlus/Pods-GrammyPlus.debug.xcconfig"; sourceTree = "<group>"; };
+		E01EDBD21FFB6E5400732A22 /* GrammyPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GrammyPlus.entitlements; sourceTree = "<group>"; };
 		E03D2E071FE89AB9007E4DE0 /* GrammyPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrammyPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03D2E0A1FE89AB9007E4DE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E03D2E0B1FE89AB9007E4DE0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -37,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C1D3CB8BA4416F96212DF9 /* libPods-GrammyPlus.a in Frameworks */,
+				DEDF42E103F76BD449E39692 /* Pods_GrammyPlus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +75,7 @@
 		E03D2E091FE89AB9007E4DE0 /* GrammyPlus */ = {
 			isa = PBXGroup;
 			children = (
+				E01EDBD21FFB6E5400732A22 /* GrammyPlus.entitlements */,
 				E0A885991FEDCADD003073AC /* Supporting Files */,
 				E03D2E0A1FE89AB9007E4DE0 /* AppDelegate.h */,
 				E03D2E0B1FE89AB9007E4DE0 /* AppDelegate.m */,
@@ -98,7 +100,7 @@
 		FA06926D5B5DB0531276508B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				73963BF2A233FE615DEBEF69 /* libPods-GrammyPlus.a */,
+				CB2FD558928F0539B56FE392 /* Pods_GrammyPlus.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,6 +140,11 @@
 					E03D2E061FE89AB9007E4DE0 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -197,9 +204,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GrammyPlus/Pods-GrammyPlus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NXOAuth2Client/NXOAuth2Client.framework",
+				"${BUILT_PRODUCTS_DIR}/p2.OAuth2/p2_OAuth2.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NXOAuth2Client.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/p2_OAuth2.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -365,7 +377,9 @@
 			baseConfigurationReference = DBF21074D114A7A5B787E435 /* Pods-GrammyPlus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GrammyPlus/GrammyPlus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9673ZGEUU;
 				INFOPLIST_FILE = GrammyPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jiumu.GrammyPlus;
@@ -379,7 +393,9 @@
 			baseConfigurationReference = C94D60912D4ABFE6E61911EE /* Pods-GrammyPlus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GrammyPlus/GrammyPlus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9673ZGEUU;
 				INFOPLIST_FILE = GrammyPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jiumu.GrammyPlus;
